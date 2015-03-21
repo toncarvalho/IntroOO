@@ -41,11 +41,10 @@ public class EstudoReflexao {
 
         for (int i = 0; i < methods.length; i++) {
 
-            System.out.println(" Método: " + methods[i].getName() + " retorno: " + methods[i].getReturnType().getSimpleName());
+            System.out.println(" Método: " + methods[i].getName() + " retorno: " + methods[i].getReturnType().getName());
 
 
-            Parameter[] argumentos = methods[i].getParameters();
-
+           /* Parameter[] argumentos = methods[i].getParameters();
 
             for (int j = 0; j < argumentos.length; j++) {
 
@@ -54,7 +53,13 @@ public class EstudoReflexao {
                 argumentos[j].getParameterizedType().getTypeName() ;
 
 
-            }
+            }*/
+
+                Class<?>[] pType  = methods[i].getParameterTypes();
+		Type[] gpType = methods[i].getGenericParameterTypes();
+		for (int x = 0; x < pType.length; x++) {
+		    System.out.println("ParameterType" + pType[x]);		    
+		}
 
 
 
