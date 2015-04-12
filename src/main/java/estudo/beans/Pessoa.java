@@ -26,12 +26,20 @@ public class Pessoa {
     }
 
 
+    public Pessoa(String nomePessoa) {
+        this.nomePessoa = nomePessoa;
+    }
+
+    public Pessoa() {
+    }
+
     @Override
     public String toString() {
         return "Pessoa{" +
                 "idPessoa=" + idPessoa +
                 ", nomePessoa='" + nomePessoa + '\'' +
                 '}';
+
     }
 
 
